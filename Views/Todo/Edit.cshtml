@@ -1,0 +1,16 @@
+﻿// Views/Todo/Edit.cshtml
+@model Sample_.Models.TodoItem
+
+<h2>Edit Todo</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label for="Task">Task</label>
+        <input type="text" class="form-control" id="Task" name="Task" value="@Model.Task" required />
+    </div>
+    <div class="form-group">
+        <label for="IsCompleted">Completed</label>
+        <input type="checkbox" class="form-check-input" id="IsCompleted" name="IsCompleted" @(Model.IsCompleted ? "checked" : "") />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

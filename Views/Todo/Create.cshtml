@@ -1,0 +1,16 @@
+﻿// Views/Todo/Create.cshtml
+@model Sample_.Models.TodoItem
+
+<h2>Create Todo</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Task">Task</label>
+        <input type="text" class="form-control" id="Task" name="Task" required />
+    </div>
+    <div class="form-group">
+        <label for="IsCompleted">Completed</label>
+        <input type="checkbox" class="form-check-input" id="IsCompleted" name="IsCompleted" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
